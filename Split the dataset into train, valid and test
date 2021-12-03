@@ -1,0 +1,6 @@
+from sklearn.datasets import load_boston
+# From the library load the necessary rows & columns
+X, y = load_boston(return_X_y=True)
+# Split the dataset into train, valid and test in 7:1:2
+from fast_ml.model_development import train_valid_test_split
+X_train, y_train, X_valid, y_valid, X_test, y_test = train_valid_test_split(df,target = 'MEDV',train_size=0.7, valid_size=0.1, test_size=0.2)
